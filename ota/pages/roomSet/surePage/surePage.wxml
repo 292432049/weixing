@@ -1,0 +1,10 @@
+<view class="steps">
+  <van-steps
+    steps="{{ steps }}"
+    active-color="#4680FF"
+    active="{{ active }}"/>
+</view>
+<room-price  id='house_price'> </room-price>
+<view class="bottomBtn">
+  <button class="buttonFixed" disabled="{{loading}}" loading="{{loading}}" bindtap="submitData"> 确认 </button>
+</view>

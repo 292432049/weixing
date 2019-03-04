@@ -1,0 +1,51 @@
+.steps{
+  margin:30rpx 100rpx 0;
+}
+.vanRow{
+  border-bottom:thin solid #f5f5f5;
+  font-size:14px;
+  padding-left:20px;
+  color:#333;
+  padding:20rpx 40rpx 20rpx 0;
+  margin-left:34rpx;
+}
+.textarea{
+  height:80px;
+  border:thin solid #ddd;
+  padding:20rpx;
+  box-sizing: border-box;
+  border-radius:5px;
+  width:100%;
+  display: block;
+}
+.text{
+  text-align: right;
+  width:98%;
+}
+.danwColor{
+  color:#333;
+  text-align:right;
+}
+.bottomBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  height:148rpx;
+  width:100%;
+  box-shadow: 1px 0px 3px #ddd;
+}
+.buttonFixed{
+  display: block;
+  width:80%;
+  height:88rpx;
+  line-height: 88rpx;
+  padding:0;
+  background:#4680FF;
+  text-align: center;
+  font-size:14px;
+  color:#fff;
+  border-radius:5px;
+}

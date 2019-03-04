@@ -1,0 +1,127 @@
+<view>
+  <form bindsubmit="formSubmit">
+    <view class="">
+      <van-cell-group
+      border="{{false}}"
+      >
+      <picker 
+        mode="selector"
+        bind:change="payOfPaymentChange"
+        range="{{payOfPayments}}"
+        range-key="label">
+        <van-field
+          value="{{ payOfPaymentLabel }}"
+          label="付款方式"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          disabled
+          is-link
+        />
+      </picker>  
+      <picker 
+        mode="selector"
+        bind:change="depositOfPaymentChange"
+        range="{{depositOfPayments}}"
+        range-key="label">
+          <van-field
+            value="{{ depositOfPaymentLabel }}"
+            label="押金方式"
+            disabled
+            placeholder="请选择"
+            border="{{ true }}"
+            input-align="right"
+            is-link
+          />
+        </picker>
+        <picker 
+        mode="selector"
+        bind:change="serviceCycleChange"
+        range="{{serviceCycles}}"
+        range-key="label">
+         <van-field
+          value="{{ serviceCycleLabel }}"
+          label="服务费周期"
+          disabled
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          is-link
+        />
+        </picker> 
+      </van-cell-group > 
+       <view class="vanRow">
+          <van-row>
+            <van-col span="8">
+             租金
+            </van-col>
+            <van-col span="12">
+              <input 
+              placeholder='请输入' 
+              value="{{roomPriceData.rent}}"
+              type="number"
+              data-name="rent"
+              bindblur="rentChange"
+              class="text"/>
+            </van-col>
+            <van-col span="4" class="danwColor">
+             元/月
+            </van-col>
+          </van-row>
+        </view>
+        <view class="vanRow">
+          <van-row>
+            <van-col span="8">
+             押金
+            </van-col>
+            <van-col span="12">
+              <input 
+              placeholder='请输入' 
+              value="{{roomPriceData.deposit}}"
+              type="number"
+              data-name="deposit"
+              bindblur="onChange"
+              disabled="{{depositDiabled}}"
+              class="text"/>
+            </van-col>
+            <van-col span="4" class="danwColor">
+             元
+            </van-col>
+          </van-row>
+        </view>
+        <view class="vanRow">
+          <van-row>
+            <van-col span="8">
+             服务费
+            </van-col>
+            <van-col span="12">
+              <input 
+              placeholder='请输入'
+              type="number"
+              data-name='serviceChargePrice'
+              value="{{serviceData.serviceChargePrice}}"
+              bindblur="onChange"
+              class="text"/>
+            </van-col>
+            <van-col span="4" class="danwColor">
+             元/月
+            </van-col>
+          </van-row>
+        </view>
+    </view>
+  </form>
+  <van-popup
+   show="{{ false }}" 
+   position="bottom"
+   overlay="{{ true }}"
+   bind:close="onClose">
+    <picker-view value="{{ false }}" bindchange="bindChange" indicator-style="height: 50px;" style="width: 100%; height: 200px;"
+  bindchange="pickerBindChange" >
+        <picker-view-column class="pickercolumn">
+          <view style="line-height: 50px" 
+           wx:for="{{dataArray[0]}}"
+           wx:key="picker">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
+   </van-popup>
+</view>

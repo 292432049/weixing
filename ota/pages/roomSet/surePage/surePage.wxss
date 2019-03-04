@@ -1,0 +1,4 @@
+/* pages/roomSet/surePage/surePage.wxss */
+.steps{
+  margin:20rpx 100rpx 0;
+}

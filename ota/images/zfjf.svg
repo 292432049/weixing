@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>zfjf</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.81337554%" y1="37.9966999%" x2="98.4762258%" y2="63.1692821%" id="linearGradient-1">
+            <stop stop-color="#FFA7AB" offset="3.62626445%"></stop>
+            <stop stop-color="#FF6471" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="30" cy="30" r="30"></circle>
+        <linearGradient x1="0%" y1="8.76006441%" x2="61.2089906%" y2="66.775554%" id="linearGradient-4">
+            <stop stop-color="#FB505F" offset="0%"></stop>
+            <stop stop-color="#FF6E78" offset="100%"></stop>
+        </linearGradient>
+        <path d="M29.6625808,-0.551084321 C32.7737742,1.18584995 33.2630657,3.26811692 31.1304553,5.69571659 C29.0545899,8.058722 23.7415048,13.9638126 15.1911997,23.4109883 L15.1912048,23.4109929 C14.8078246,23.8345872 14.8404245,24.4887694 15.2640188,24.8721496 C15.2692065,24.8768448 15.2744416,24.8814872 15.2797235,24.8860762 L42.2016433,48.2761988 C45.7133547,53.1734914 44.2454802,56.8618669 37.7980199,59.3413254 C31.3505597,61.8207839 36.2421275,62.4520137 52.4727236,61.2350148 L79.5738483,5.69571659 L31.1304553,-3.10344828 L29.6625808,-0.551084321 Z" id="path-5"></path>
+        <filter x="-20.2%" y="-16.9%" width="140.5%" height="140.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.685625789   0 0 0 0 0.706072892  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="9.67601434%" y1="47.5362026%" x2="70.1420671%" y2="47.5362026%" id="linearGradient-7">
+            <stop stop-color="#FFF7F8" offset="0%"></stop>
+            <stop stop-color="#FFF2F2" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-8" cx="30" cy="30" r="30"></circle>
+        <filter x="-8.3%" y="-8.3%" width="116.7%" height="116.7%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.684836648   0 0 0 0 0.684836648  0 0 0 0.304489357 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="v1.0.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="麦邻租房" transform="translate(-158.000000, -332.000000)">
+            <rect fill="#F6F6F7" x="0" y="0" width="375" height="667"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="375" height="667"></rect>
+            <g id="Path-3" transform="translate(158.000000, 332.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <path d="M14.9047852,24.3017578 L14.9047852,30.8264303 C14.9047852,31.1281861 15.0365417,31.4149 15.2655238,31.6114293 L44.3322333,56.5586274 L49.7036638,44.2135304 L15.8159736,23.9988374 C15.5151804,23.8194082 15.1258833,23.9177931 14.9464541,24.2185863 C14.930547,24.2452527 14.9166199,24.2730513 14.9047852,24.3017578 Z" id="Path-5" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+                <g mask="url(#mask-3)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <path d="M48.9616447,-2.58418642 C38.9266231,-5.88631466 35.6817416,-6.25151536 39.2270003,-3.67978852 C42.7722589,-1.10806169 43.140827,2.24356816 40.3327047,6.37510102 L26.0891544,22.0626646 C25.7076985,22.4827926 25.7358955,23.13179 26.1523517,23.5172511 L50.1249327,45.7056506 C52.3545259,47.3408877 53.1458782,49.9254108 52.4989898,53.4592201 C51.8521013,56.9930294 57.8955078,46.7803745 70.6292093,22.8212554 L48.9616447,-2.58418642 Z" id="Path-4" fill="url(#linearGradient-7)" mask="url(#mask-3)"></path>
+                <text id="¥" mask="url(#mask-3)" transform="translate(52.682319, 25.139298) rotate(-48.000000) translate(-52.682319, -25.139298) " font-family="PingFangSC-Semibold, PingFang SC" font-size="28.9655172" font-weight="500" letter-spacing="-0.695172416" fill="#FFBABE">
+                    <tspan x="44.3402497" y="35.6392982">¥</tspan>
+                </text>
+                <mask id="mask-9" fill="white">
+                    <use xlink:href="#path-8"></use>
+                </mask>
+                <g id="Mask" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-10)" xlink:href="#path-8"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

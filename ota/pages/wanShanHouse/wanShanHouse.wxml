@@ -1,0 +1,39 @@
+<view class="houseDetail" 
+wx:for="{{presaveRoomList}}" 
+wx:key="presaveRoom"
+wx:for-index='idx1'>
+   <view class="houseArea">
+    {{idx1}}
+   </view>
+   <view class="houseList"  
+   wx:for="{{presaveRoomList[idx1]}}"   
+   wx:key="room"
+   wx:for-index='idx2'>
+    <view class="list" bindtap='entryRoomPz' touchstart='entryRoomPz' data-name="{{presaveRoomList[idx1][idx2]}}">
+      <view>
+        {{presaveRoomList[idx1][idx2].buildingName}}-{{presaveRoomList[idx1][idx2].unitCode}}单元-{{presaveRoomList[idx1][idx2].roomNo}}<text wx:if="{{presaveRoomList[idx1][idx2].roomName!==null}}">-{{presaveRoomList[idx1][idx2].roomName}}</text>
+      </view>
+      <view>
+        <view wx:if="{{ presaveRoomList[idx1][idx2].houseRentType === 2}}">
+          合租
+          </view>
+        <view wx:if="{{ presaveRoomList[idx1][idx2].houseRentType == 1}}">
+          整租
+          </view>
+      </view>
+    </view>
+   </view>
+   <van-popup
+      show="{{ popupShow }}"
+      position="bottom"
+      overlay="{{ false }}"
+      bind:close="onClose"
+    >
+    <view class="editBtn">
+      <view size="30rpx" bindtap='editHouseFun'>编辑房源</view>
+      <view bindtap='deletHouse'>删除</view>
+      <view bindtap='canclePopup'>取消</view>
+      </view>
+    </van-popup>
+    <van-dialog id="van-dialog" />
+</view>

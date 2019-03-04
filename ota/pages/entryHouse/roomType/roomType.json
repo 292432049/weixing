@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-steps": "../../../components/steps/index",
+    "van-cell": "../../../components//cell/index",
+    "van-cell-group": "../../../components/cell-group/index",
+    "van-field": "../../../components/field/index",
+    "van-popup": "../../../components/popup/index",
+    "van-button": "../../../components/button/index",
+    "van-area": "../../../components/area/index",
+    "van-switch": "../../../components/switch/index"
+  },
+  "navigationBarTitleText": "房源录入"
+}

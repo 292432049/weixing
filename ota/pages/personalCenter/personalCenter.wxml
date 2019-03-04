@@ -1,0 +1,51 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class="container">
+   <view class="bck"></view>
+   <view class="per-box">
+      <view class="box-infor">
+        <view class="pho-box">
+          <view class="crop" bindtap="">
+            <image class="photo Action" src="{{avatarUrl || hrefavatarUrl}}"></image>
+          </view>
+        </view>
+        <view class="out" bindtap='setFun'>
+          <image class="out-icon" src="../../images/set_icon.png"></image>
+        </view>
+        <view class="per-inf">
+          <view class="name">{{nickName}}</view>
+          <view class="phone">{{mobile}}</view>
+        </view>
+      </view>
+      <view class="tab-go">
+        <view class="goItem" bindtap="showEnterHouse">
+            <image class="goIcon" src="../../images/lr_list.png"></image>
+        </view>
+        <view class="goItem secondeIcon" bindtap='toLinkRoomWanshan'>
+          <image class="goIcon secondeIcon" src="../../images/ws_list.png"></image>
+        </view>
+        <van-popup 
+        position="bottom"
+        overlay="{{false}}"
+        show="{{ enterHouseShow }}" 
+        bind:click-overlay="closeEnterHouse">
+          <view class="enterHouse" >
+          <!-- <navigator class="enterHouseLink" hover-class="none"  url="/pages/entryHouse/entryHouse?houseRentType=2"> -->
+          <view class="enterHouseLink" bindtap='enterHouse' data-id="2">
+           <image class="img" src="../../images/hz_icon.png"></image>
+          分散式合租
+          </view>
+          <!-- </navigator> -->
+           <!-- <navigator class="enterHouseLink" hover-class="none"  url="/pages/entryHouse/entryHouse?houseRentType=1"> -->
+          <view class="enterHouseLink" bindtap='enterHouse' data-id="1">
+            <image class="img" src="../../images/zz_icon.png"></image>
+            分散式整租
+          </view>
+          <!-- </navigator> -->
+          </view>
+          <view class="closeEnterHouse" bindtap='closeEnterHouse'>
+             <image class="closeImg" src="../../images/close.png" ></image>
+          </view>
+        </van-popup>
+      </view>
+   </view>
+</view>

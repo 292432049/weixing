@@ -1,0 +1,50 @@
+
+<view class="steps">
+  <van-steps
+  steps="{{ steps }}"
+  active-color="#4680FF"
+  active="{{ active }}"/>
+</view>
+<view wx:for="{{hostingRooms}}" wx:key="roomlist">
+    <view class="roomList">
+      <view>
+          房间名称
+      </view>
+      <view>
+      {{item.roomName}}
+      </view>
+    </view>
+    <view class="roomStatus">
+    <view>
+    已出租
+    </view>
+    <view class="roomText">
+      已出租请打开开关
+    </view> 
+    <view>
+    <!-- <switch bindchange="changeRoomStatus" class="changeIcon"/> -->
+    <van-switch checked="{{ checkedArray[index] }}" 
+    data-id="{{index}}"
+    bind:change="onChange" size="50rpx" />
+    </view>
+  </view>
+</view>
+  <view class="addRoom {{gray}}" bindtap='addRoom'>
+     添加房间（{{roomNum}}/{{allRoomLen}}）
+  </view> 
+  <view class="bottomBtn">
+    <button 
+      data-name="continueEntryHouse" 
+      disabled='{{loading}}' 
+      loading='{{loading}}' 
+      bindtap='submitEntry'>
+        保存继续录入
+    </button>
+    <button 
+      data-name="saveEntryHouse" 
+      disabled='{{loading}}' 
+      loading='{{loading}}' 
+      bindtap='submitEntry'>
+        保存并完善
+    </button>
+  </view>

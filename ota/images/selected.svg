@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="20" y="84" width="335" height="78" rx="4"></rect>
+        <filter x="-1.9%" y="-7.1%" width="103.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.910235969   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0959012681 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="v1.0.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账单详情-优惠券选择" transform="translate(-321.000000, -111.000000)">
+            <rect fill="#F7F7F7" x="0" y="0" width="375" height="667"></rect>
+            <g id="Rectangle-10">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <rect stroke="#FF8C07" stroke-width="0.5" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="20.25" y="84.25" width="334.5" height="77.5" rx="4"></rect>
+            </g>
+            <g id="selected" transform="translate(321.000000, 111.000000)">
+                <circle id="Oval-61" fill="#FF8C07" cx="12" cy="12" r="12"></circle>
+                <polygon id="Imported-Layers" stroke="#FFFFFF" fill="#FFFFFF" points="17.1212606 8.15758908 10.6717611 14.6934261 6.87857469 10.9645074 6.15071163 11.7246176 10.6717611 16.1945083 17.8492884 8.91804349"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

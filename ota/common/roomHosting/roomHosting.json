@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-steps": "../../components/steps/index",
+    "van-cell": "../../components//cell/index",
+    "van-cell-group": "../../components/cell-group/index",
+    "van-field": "../../components/field/index",
+    "van-popup": "../../components/popup/index",
+    "van-button": "../../components/button/index",
+    "van-area": "../../components/area/index",
+    "van-row": "../../components/row/index",
+    "van-col": "../../components/col/index",
+    "picture": "../picture/picture"
+  }
+}

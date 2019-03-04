@@ -1,0 +1,10 @@
+<view class="steps">
+    <van-steps
+    steps="{{ steps }}"
+    active-color="#4680FF"
+    active="{{ active }}"/>
+</view>
+<house-hosting imgNum="{{imgNum}}"  pictureName="{{pictureName}}" id="house_hosting" defaultHostingInfo="{{defaultHostingInfo}}"></house-hosting>
+<view class="bottomBtn">
+<button class="buttonFixed"  disabled="{{loading}}"  loading="{{loading}}"  bindtap="nextTepF"> 下一步 </button>
+</view>

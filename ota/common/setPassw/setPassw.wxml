@@ -1,0 +1,27 @@
+<view class="inp-Item">
+      <input  
+      class="inp"
+      type='text' 
+      placeholder='请输入手机号' 
+      value="{{phone}}" 
+      data-name="phone"
+      bindinput='onChange'/>
+    </view>
+   <view class="inp-Item flex">
+      <input  type='text' 
+      class="inp"
+      value="{{code}}"
+      data-name='code' 
+      bindinput='onChange'
+      placeholder='请输入验证码'/>
+      <view class='getCodeBtn' bindtap="sendCode" style="color:{{color}}">{{text}}</view>
+    </view>
+    <view  class='inp-Item'>
+      <input
+      class="inp"
+      placeholder='请输入新密码'
+      data-name="newPassw" 
+      type='password'
+      value="{{newPassw}}"
+      bindinput='onChange'/>
+    </view>

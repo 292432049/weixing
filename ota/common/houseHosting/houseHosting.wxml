@@ -1,0 +1,148 @@
+<view>
+  <form bindsubmit="formSubmit">
+    <view class="">
+      <van-field
+          value="{{ hostingInfo.contactName }}"
+          label="看房联系人"
+          placeholder="请输入"
+          border="{{ true }}"
+          bind:change="onChange"
+          data-id="contactName"
+          input-align="right"
+        />
+         <picker 
+        mode="selector"
+        bindchange="sexPickerChange"
+        range="{{sexs}}"
+        range-key="label">
+        <van-field
+          value="{{ sexLabel }}"
+          label="性别"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          disabled
+          is-link
+          inputClass="inputClass"
+        />
+        </picker>
+         <van-field
+          value="{{ hostingInfo.contactMobile }}"
+          label="联系电话"
+          placeholder="请输入"
+          border="{{ true }}"
+          type="number"
+          data-id="contactMobile"
+          bind:change="onChange"
+          input-align="right"
+        />
+        <view class="vanRow">
+          <van-row>
+            <van-col span="8">
+            面积
+            </van-col>
+            <van-col span="14">
+              <input 
+              value="{{hostingInfo.houseArea}}"
+              placeholder='请输入纯数字' 
+              class="text"
+              type="digit"
+              bindblur= 'onChange'
+              data-id="houseArea"
+              />
+            </van-col>
+            <van-col span="2" class="danwColor">
+            ㎡
+            </van-col>
+          </van-row>
+        </view>
+        <picker 
+        mode="selector"
+        bindchange="directionPickerChange"
+        range="{{roomDirectionList}}"
+        range-key="label">
+        <van-field
+          value="{{ houseDirectionLabel }}"
+          label="朝向"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          disabled
+          is-link
+        />
+        </picker>
+        <view class="vanRow">
+          <van-row>
+            <van-col span="18">
+            {{pictureName}}
+            </van-col>
+            <van-col span="6">
+              <view  class="uploadImg" bindtap="upLoadImg">
+               +添加照片
+               <text class="imgNum" wx:if="{{imgNum!==0}}">
+               {{imgNum}}
+               </text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view>
+        <van-field
+          bindtap='showPopuRoomSet'
+          value="{{ facilityItemsName }}"
+          label="房间设施"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          disabled
+          is-link
+        />
+         </view>
+        <view class="vanRow" style="border-bottom:none">
+          <van-row>
+            <van-col span="8">
+            房间描述
+            </van-col>
+            <van-col span="16">
+              <textarea  
+              wx:if="{{textareaShow===true}}"
+              class="textarea" 
+              placeholder='请输入150字以内的描述' 
+              value="{{hostingInfo.houseDesc}}"
+              maxlength='150'
+              bindinput='textareaBlur'
+              hidden='{{false}}'></textarea>
+            </van-col>
+          </van-row>
+        </view>
+        <van-popup
+          show="{{ roomSetShow }}"
+          position="bottom"
+          overlay="{{ true }}"
+          bind:close="onClose"
+        >
+        <view class="checkbox_group">
+        <checkbox-group bindchange="checkboxChange">
+          <view class="sureRoomSet"
+          bindtap='sureRoomSetClick'>确定</view>
+          <label class="checkbox" 
+          wx:for="{{checkItems}}"
+           wx:key="checkbox">
+            <checkbox 
+            value="{{item.value}},{{item.name}}" 
+            checked="{{item.checked}}"
+            color="#4680FF"/> {{item.name}}
+          </label>
+        </checkbox-group>
+        </view>
+      </van-popup>
+       <!-- <van-popup 
+          custom-style="width:100%;min-height:100%;height:auto"
+          show="{{ picturesShow }}"
+          position="right"
+          overlay="{{ true }}">
+        <picture bind:closeUploadImg="closeUploadImg" defaultPictures="{{hostingInfo.pictures}}" id="picture"></picture>
+        </van-popup> -->
+    </view>
+  </form>
+</view>

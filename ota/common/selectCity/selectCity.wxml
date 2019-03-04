@@ -1,0 +1,50 @@
+<!--common/selectCity/selectCity.wxml-->
+<view id="city">
+    <scroll-view 
+   scroll-y 
+   style="height:{{clientHeight}}px"
+   scroll-into-view="{{scrollTopId}}" >
+  <view class="addresslist">
+      <!-- <view class="citylistNum">当前定位城市</view> -->
+      <view class="citylistName cxdw">
+        <view class="block" 
+          data-id="{{fixedAdressId}}" 
+          bindtap='selectCity'>
+           当前定位城市: {{currentAdress}}
+        </view> 
+        <view class="block dingwei" bindtap='getCityNameOFLocation'>
+            重新定位
+        </view>
+      </view>
+  </view>
+    <view class="addresslist">
+      <view wx:for="{{cityData}}" 
+         wx:for-item="i" 
+         wx:key="city"
+         wx:for-index="idx1">
+        <view class="citylistNum" id="{{'address'+idx1}}" >{{idx1}}</view>
+        <view  
+          wx:for="{{cityData[idx1]}}"  
+          wx:for-item="j" 
+          wx:key="citylist"
+          wx:for-index="idx2">
+          <view class="citylistName" 
+          data-id="{{cityData[idx1][idx2].areaId}}" 
+          bindtap='selectCity'>
+            {{cityData[idx1][idx2].areaName}}
+          </view>
+        </view>
+      </view>
+  </view>
+ </scroll-view>
+  <view class="toPosition">
+  <view  wx:for="{{toCityArray}}"
+   id="{{item}}"
+   bindtap='toCityPosition'
+   wx:key="toCity">
+    {{item}}
+  </view>
+  </view>
+ 
+</view>
+

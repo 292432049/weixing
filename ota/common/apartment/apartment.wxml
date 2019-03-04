@@ -1,0 +1,34 @@
+<view>
+  <!-- <van-search value="{{ value }}" 
+  bind:change="serchChange" 
+  placeholder="请输入搜索关键词" /> -->
+  <van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="searchChange"
+  bind:search="searchSubmit"
+  bind:confirm="searchSubmit"
+>
+  <view slot="action" bind:tap="searchSubmit">搜索</view>
+</van-search>
+<view class="tips" wx:if="{{showAdressList === false}}">无法搜索到的小区请在pc端录入</view>
+  <view wx:for="{{nameData}}"
+  wx:key="name"
+  class="list"
+    wx:for-item="i">
+    <van-icon 
+    name="location" 
+    color="#908f8e"
+    size="18px"/>
+    <view class="serachlist" 
+      data-id='{{nameData[index]}}' 
+      data-name='{{nameData[index].nameAdress}}' 
+      data-regionaddressid='{{nameData[index].regionAddressId}}'
+      bindtap='backEntryHouse'>
+      {{nameData[index].nameQu}}
+      <!-- <rich-text nodes="  {{nameData[index].nameAdress}}" class="serachText"></rich-text> -->
+        <text class="serachText"> {{nameData[index].nameAdress}}</text>
+    </view>
+  </view>
+</view>

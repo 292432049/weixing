@@ -1,0 +1,141 @@
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="">
+        <view class="vanRow">
+          <van-row>
+            <van-col span="8">
+            面积
+            </van-col>
+            <van-col span="14">
+              <input 
+              value="{{hostingRooms.roomArea}}"
+              placeholder='请输入纯数字' 
+              class="text"
+              type="digit"
+              bindblur= 'onChange'
+              data-id="roomArea"
+              />
+            </van-col>
+            <van-col span="2" class="danwColor">
+            ㎡
+            </van-col>
+          </van-row>
+        </view>
+        <picker 
+        mode="selector"
+        bindchange="directionPickerChange"
+        range="{{roomDirectionList}}"
+        range-key="label">
+        <van-field
+          class="fieldClass"
+          placeholder-class="fieldClass"
+          value="{{ roomDirectionLabel}}"
+          label="朝向"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          disabled
+          is-link
+        />
+        </picker>
+         <!-- <picker 
+        mode="selector"
+        bindchange="featuresPickerChange"
+        range="{{roomFeatures}}"
+        range-key="label"> -->
+        <van-field
+          class="fieldClass"
+          value="{{ roomAttributesName }}"
+          label="房间特色"
+          placeholder="请选择"
+          border="{{ true }}"
+          input-align="right"
+          data-name = "roomfeaturesShow"
+          bindtap='showPopuRoomSet'
+          disabled
+          is-link
+        />
+        <!-- </picker> -->
+        <view class="vanRow">
+          <van-row>
+            <van-col span="18">
+            房间照片
+            </van-col>
+             <van-col span="6">
+              <view  class="uploadImg" bindtap="upLoadImg">
+               +添加照片
+               <text class="imgNum" wx:if="{{imgNum!==0}}">
+               {{imgNum}}
+               </text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view>
+        <van-field
+          bindtap='showPopuRoomSet'
+          value="{{ facilityItemsName }}"
+          label="房间配置"
+          placeholder="请选择"
+          border="{{ true }}"
+          data-name="roomSetShow"
+          input-align="right"
+          disabled
+          is-link
+        />
+         </view>
+         <!-- 房间配置 -->
+        <van-popup
+          show="{{ roomSetShow }}"
+          position="bottom"
+          overlay="{{ true }}"
+          bind:close="onClose"
+        >
+        <view class="checkbox_group ">
+        <checkbox-group bindchange="checkboxChange" data-name='facilityItems'>
+          <view class="sureRoomSet"
+          bindtap='sureRoomSetClick' >确定</view>
+          <label class="checkbox" 
+          wx:for="{{checkItems}}"
+           wx:key="checkbox">
+            <checkbox 
+            value="{{item.value}},{{item.name}}" 
+            checked="{{item.checked}}"
+            color="#4680FF"/> {{item.name}}
+          </label>
+        </checkbox-group>
+        </view>
+      </van-popup>
+       <!-- 照片 -->
+       <!-- <van-popup 
+          custom-style="width:100%;min-height:100%;height:auto"
+          show="{{ picturesShow }}"
+          position="right"
+          overlay="{{ true }}">
+        <picture bind:closeUploadImg="closeUploadImg" id="picture"></picture>
+        </van-popup> -->
+        <!-- 房间特色 -->
+        <van-popup
+          show="{{ roomfeaturesShow }}"
+          position="bottom"
+          overlay="{{ true }}"
+          bind:close="onClose"
+        >
+        <view class="checkbox_group checkbox_group2">
+        <checkbox-group bindchange="checkboxChange" data-name="roomAttributes">
+          <view class="sureRoomSet"
+          bindtap='sureRoomSetClick'>确定</view>
+          <label class="checkbox checkbox2" 
+            wx:for="{{roomFeatures}}"
+            wx:key="Features">
+            <checkbox 
+            value="{{item.value}},{{item.name}}" 
+            checked="{{item.checked}}"
+            color="#4680FF"/> {{item.name}}
+          </label>
+        </checkbox-group>
+        </view>
+      </van-popup>
+    </view>
+  </form>
+</view>

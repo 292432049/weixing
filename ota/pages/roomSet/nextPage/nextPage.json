@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "room-price": "../../../common/roomPrice/roomPrice",
+    "room-hosting": "../../../common/roomHosting/roomHosting",
+    "house-hosting": "../../../common/houseHosting/houseHosting",
+    "van-steps": "../../../components/steps/index",
+    "van-dialog": "../../../components/dialog/index"
+  },
+  "navigationBarTitleText": "房间配置"
+}

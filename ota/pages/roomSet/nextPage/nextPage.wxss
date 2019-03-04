@@ -1,0 +1,7 @@
+/* pages/roomSet/nextPage/nextPage.wxss */
+page{
+  margin-bottom:120px;
+}
+.steps{
+  margin:20rpx 100rpx 0;
+}

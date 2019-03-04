@@ -1,0 +1,102 @@
+<!--pages/entryHouse/roomType/roomType.wxml-->
+<view>
+  <view class="steps">
+    <van-steps
+    steps="{{ steps }}"
+    active-color="#4680FF"
+    active="{{ active }}"/>
+  </view>
+<form >
+<view class="roomDetails roomBtm">
+    <view class="roomDStep {{chamberCountShow==true?'active':''}}" bindtap='chamberCountClick' data-name="chamberCount">
+       <view>卧室</view>
+       <view class="placeText">{{etryHouseData.chamberCount}}</view>
+    </view>
+    <view class="roomDStep" data-name="boardCount" bindtap='roomCountClick' >
+       <view>客厅</view>
+       <view class="placeText">{{etryHouseData.boardCount}}</view>
+    </view>
+     <view class="roomDStep" data-name="kitchenCount"  bindtap='roomCountClick' >
+       <view>厨房</view>
+       <view class="placeText">{{etryHouseData.kitchenCount}}</view>
+    </view>
+    <view class="roomDStep" data-name="toiletCount"  bindtap='roomCountClick' >
+       <view>卫生间</view>
+       <view class="placeText">{{etryHouseData.toiletCount}}</view>
+    </view>
+  </view>
+  <van-popup 
+  custom-style="width:100%;" 
+  show="{{ popupShow }}" 
+  position="bottom"
+  bind:close="onClose">
+  <view class="roomDetails">
+    <view class="roomDStep {{chamberCountShow==true?'active':''}}" bindtap='chamberCountClick' data-name="chamberCount">
+       <view>卧室</view>
+       <view class="placeText">{{etryHouseData.chamberCount}}</view>
+    </view>
+    <view class="roomDStep {{boardCountShow==true?'active':''}}"  
+    data-name="boardCount"
+     bindtap='roomCountClick'>
+       <view>客厅</view>
+       <view class="placeText">{{etryHouseData.boardCount}}</view>
+    </view>
+     <view class="roomDStep {{kitchenCountShow==true?'active':''}}" 
+     data-name="kitchenCount"  
+     bindtap='roomCountClick' >
+       <view>厨房</view>
+       <view class="placeText">{{etryHouseData.kitchenCount}}</view>
+    </view>
+    <view class="roomDStep  {{toiletCountShow==true?'active':''}} 
+    data-name="toiletCount"  
+    bindtap='roomCountClick' >
+       <view>卫生间</view>
+       <view class="placeText">{{etryHouseData.toiletCount}}</view>
+    </view>
+  </view>
+  <view class="sureRoomDetail">
+    <view>{{currentDatasetName}}</view>
+    <view bindtap='sureClick' wx:if="{{chamberCountShow}}" data-name="chamberCount">确定</view>
+    <view bindtap='sureClick' wx:if="{{boardCountShow}}" data-name="boardCount">确定</view>
+    <view bindtap='sureClick' wx:if="{{kitchenCountShow}}" data-name="kitchenCount">确定</view>
+    <view bindtap='sureClick' wx:if="{{toiletCountShow}}" data-name="toiletCount">确定</view>
+  </view>
+  <picker-view value="{{pickerdefalutvalue}}" indicator-style="height: 50px;" style="width: 100%; height: 200px;"
+  bindchange="pickerBindChange"
+  >
+     <picker-view-column  class="pickercolumn" wx:if="{{chamberCountShow === true}}">
+    <view wx:for="{{dataArray[0]}}" wx:key="{chamberCount" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column class="pickercolumn" wx:key="{roomDataShow" wx:if="{{roomDataShow === true}}">
+          <view wx:for="{{dataArray[1]}}" wx:key="selectLabel" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+   </picker-view>
+ </van-popup>
+  <view class="roomStatus" wx:if="{{houseRentType === '1'}}">
+    <view>
+    已出租
+    </view>
+    <view class="roomText">
+      已出租请打开开关
+    </view> 
+    <view>
+    <!-- <switch bindchange="changeRoomStatus" class="changeIcon"/> -->
+    <van-switch checked="{{ checked }}" bind:change="onChange" size="50rpx" />
+    </view>
+  </view>
+   <view class="bottomBtn" wx:if="{{houseRentType === '2'}}">
+    <button data-name="continueEntryHouse" bindtap='nextTeps'>
+        下一步
+    </button>
+  </view>
+  <view class="bottomBtn"  wx:if="{{houseRentType === '1'}}">
+    <button data-name="continueEntryHouse" disabled='{{loading}}' loading='{{loading}}' bindtap='submitEntry'>
+        保存继续录入
+    </button>
+    <button data-name="saveEntryHouse" disabled='{{loading}}' loading='{{loading}}'  bindtap='submitEntry'>
+        保存并完善
+    </button>
+  </view>
+ </form>
+</view>
+

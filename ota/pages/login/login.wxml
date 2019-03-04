@@ -1,0 +1,53 @@
+
+<!--pages/login/login.wxml-->
+<view>
+  <view class="bck"></view>
+  <view class="login-box">
+     <view class="box">
+        <view class='tab' >
+          <view class="tabItem" wx:key="{{item}}" wx:for="{{list}}"   bindtap="tapName" data-id="{{item.id}}">
+            <text class="text-pa {{item.id==tabActive?'tabText':''}}">{{item.title}}</text>
+           </view>
+        </view>
+        <view class="inp-box" wx:if='{{tabActive==0}}'>
+            <view class="inp-Item">
+              <input type='number' placeholder-class="phcolor" class="inp" placeholder='请输入手机号' bindinput='getUsername' bindfocus="showClearIcon" bindblur="hideClearIcon" value="{{username}}" data-input-type="1"></input>
+              <icon class="inp-clear-icon" type="clear" size="14" data-input-type="1" bindtap="clearInput" wx:if="{{username.length > 0 && activeInput === '1'}}"/>
+            </view>
+            <view class="inp-Item">
+              <input type='password' value="{{password}}" placeholder-class="phcolor" class="inp" placeholder='请输入密码' maxlength='12' bindinput='getPassword' bindfocus="showClearIcon" bindblur="hideClearIcon" data-input-type="2"></input>
+              <icon class="inp-clear-icon" type="clear" size="14" data-input-type="2" bindtap="clearInput" wx:if="{{password.length > 0 && activeInput === '2'}}"/>
+            </view>
+            <view class="btn">
+              <button class="btn-tex" data-name="account" 
+              bindtap='goLogin'
+              disabled='{{loading}}' 
+              loading='{{loading}}'>登录</button>
+            </view>
+            <view class="text">
+              <navigator class="forget" url="/pages/forgetPassword/forgetPassword">忘记密码</navigator>
+            </view>
+        </view>
+         <view class="inp-box" wx:else>
+          <!-- <form bindsubmit='formSubmitcode'> -->
+            <view class="inp-Item">
+              <input type='number'  placeholder-class="phcolor" class="inp" placeholder='请输入手机号' name="mobile" bindinput='getMobile' value="{{mobile}}" data-input-type="3" bindfocus="showClearIcon" bindblur="hideClearIcon"></input>
+              <icon class="inp-clear-icon" type="clear" size="14" data-input-type="3" bindtap="clearInput" wx:if="{{mobile.length > 0 && activeInput === '3'}}"/>
+            </view>
+            <view class="inp-Item">
+              <input type='number' bindinput='getCode' placeholder-class="phcolor" class="inp" placeholder='请输入验证码' name='vcode'></input>
+              <button class='btn-v' hover-class="none" disabled="{{codeDis}}" bindtap='sendCode'>{{textTime}}</button>
+            </view>
+            <view class="btn">
+              <button class="btn-tex"
+               data-name="verifyCode"
+               bindtap='goLogin'
+               disabled='{{loading}}' 
+               loading='{{loading}}'>登录</button>
+            </view>
+          <!-- </form> -->
+        </view>
+     </view>
+  </view>
+   <van-dialog id="van-dialog" />
+</view>

@@ -1,0 +1,4 @@
+/* pages/roomSet/secondPage/secondPage.wxss */
+.steps{
+  margin:20rpx 100rpx 0;
+}

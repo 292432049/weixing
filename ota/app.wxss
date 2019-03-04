@@ -1,0 +1,113 @@
+/**app.wxss**/
+
+/*iconfont*/
+@font-face {
+  font-family: 'iconfont';  /* project id 779840 */
+  src: url('//at.alicdn.com/t/font_779840_hiqemnqiiew.eot');
+  src: url('//at.alicdn.com/t/font_779840_hiqemnqiiew.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_779840_hiqemnqiiew.woff') format('woff'),
+  url('//at.alicdn.com/t/font_779840_hiqemnqiiew.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_779840_hiqemnqiiew.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:32rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianfei:before { content: "\e62a"; }
+
+.icon-shuifei:before { content: "\e62d"; }
+
+.icon-yanzhengma:before { content: "\e6a5"; }
+
+.icon-hetongguanli:before { content: "\e62e"; }
+
+.icon-qianyue:before { content: "\e621"; }
+
+.icon-jiaofei:before { content: "\e6a9"; }
+
+
+.flex {
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.mainColor {
+  color: #FF9800;
+}
+
+.mainBgcolor {
+  background-color: #FF9800;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.bottomBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  height:148rpx;
+  width:100%;
+  box-shadow: 1px 0px 3px #ddd;
+  background:#fff;
+  z-index:10;
+}
+.buttonFixed{
+  width:40%;
+  display: block;
+  height:80rpx;
+  line-height: 88rpx;
+  padding:0;
+  background:#4680FF;
+  text-align: center;
+  font-size:14px;
+  color:#fff;
+  border-radius:5px;
+}
+.pickerColumn{
+  text-align: center;
+}
+.pickercolumn view{
+  text-align: center;
+  font-size:12px;
+}

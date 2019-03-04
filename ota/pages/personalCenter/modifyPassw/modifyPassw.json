@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "set-passw": "../../../common/setPassw/setPassw",
+    "van-dialog": "../../../components/dialog/index"
+  }
+}

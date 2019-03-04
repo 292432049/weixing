@@ -1,0 +1,7 @@
+<!--pages/personalCenter/centerSet/centerSet.wxml-->
+<view class="modifyPass" bindtap='modifyPassw'>
+修改密码
+</view>
+<view class="loginOut" bindtap='loginOut'>
+  退出登录
+</view>

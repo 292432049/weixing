@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/entryHouse/roomType/roomType",
+    "pages/roomSet/picture/picture",
+    "common/picture/picture",
+    "pages/wanShanHouse/wanShanHouse",
+    "common/apartment/apartment",
+    "pages/forgetPassword/forgetPassword",
+    "pages/personalCenter/centerSet/centerSet",
+    "pages/personalCenter/personalCenter",
+    "pages/entryHouse/addRoom/addRoom",
+    "pages/roomSet/nextPage/nextPage",
+    "common/roomPrice/roomPrice",
+    "pages/entryHouse/entryHouse",
+    "common/selectCity/selectCity",
+    "pages/index/index",
+    "common/roomHosting/roomHosting",
+    "common/houseHosting/houseHosting",
+    "pages/roomSet/secondPage/secondPage",
+    "pages/roomSet/surePage/surePage",
+    "pages/personalCenter/modifyPassw/modifyPassw",
+    "common/setPassw/setPassw"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "麦滴管家房源管理",
+    "navigationBarTextStyle": "black"
+  }
+}

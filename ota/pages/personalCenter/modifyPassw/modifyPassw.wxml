@@ -1,0 +1,8 @@
+<view class="contains">
+  <view class="title">{{title}}</view>
+  <form >
+    <set-passw id="set_passw"></set-passw>
+    <view class="btn-tex" bindtap='resetPassw'>重置</view>
+    </form>
+    <van-dialog id="van-dialog" />
+</view>

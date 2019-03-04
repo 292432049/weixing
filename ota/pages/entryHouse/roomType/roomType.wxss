@@ -1,0 +1,91 @@
+/* pages/entryHouse/roomType/roomType.wxss */
+.steps{
+  margin:30rpx 100rpx 0;
+}
+.roomDetails{
+  
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size:12px;
+  border-bottom:1px solid #ddd;
+  padding:30rpx 0;
+}
+.roomBtm{
+  margin:20rpx 40rpx;
+}
+.roomDetails .roomDStep{
+  flex:1;
+  border-right:1px solid #ddd;
+}
+.roomDetails .roomDStep:last-child{
+  border-right:none;
+}
+.roomStatus{
+  margin:0 40rpx;
+  padding:20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  font-size:12px;
+  border-bottom:1px solid #ddd
+}
+.roomText{
+  color:#ddd;
+}
+.pickerColumn{
+  text-align: center;
+}
+.pickercolumn view{
+  text-align: center;
+  font-size:12px;
+}
+.sureRoomDetail{
+  font-size:12px;padding-left:40rpx;
+  display: flex;
+  justify-content: flex-end;
+  padding:0 20rpx;
+  margin-top:20rpx;
+}
+.sureRoomDetail view:first-child{
+  padding-left:57rpx;
+  flex:1;
+  text-align: center;
+}
+.sureRoomDetail view:last-child{
+  color:#4680FF;
+}
+.active{
+  color:#4680FF;
+  }
+.bottomBtn{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  height:74px;
+  width:100%;
+  box-shadow: 1px 0px 3px #ddd;
+}
+.bottomBtn button{
+    padding:6rpx;
+    width:40%;
+    border-radius:4px;
+    font-size:14px;
+    text-align: center;
+    border:none;
+}
+.bottomBtn button:first-child{
+  /* border:thin solid #99A9BF; */
+  color:#99A9BF;
+}
+.bottomBtn button:last-child{
+    background:#4680FF;
+    color:#fff;
+}
+.placeText{
+  padding-top:10rpx;
+  font-size:12px; 
+  color:#aaa;
+}

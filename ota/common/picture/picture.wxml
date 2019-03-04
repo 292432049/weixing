@@ -1,0 +1,21 @@
+<!--common/picture/picture.wxml-->
+<view>
+<view class="contains">
+  <view class="imgArea">
+    <view wx:for="{{imgaddrs}}" wx:if="{{imgaddrs.length>0}}" wx:key="img">
+        <text class="deleteImg" data-id="{{index}}" bindtap="deleteImgTap">X</text>
+        <image mode="" src="{{item}}"></image>
+    </view>
+    <view bindtap='chooseImage'>
+      <view class="uploadImg"> + </view>  
+    </view>
+  </view>
+  <!-- <view class="sureBtn" >
+  确定
+  </view> -->
+  <view class="bottomBtn">
+   <button class="buttonFixed buttonCancel" data-name="cancel" bindtap='sureSavePictures'> 取消 </button>
+    <button class="buttonFixed" data-name="sure" bindtap='sureSavePictures'> 保存 </button>
+  </view>
+</view>
+</view>
